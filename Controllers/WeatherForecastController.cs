@@ -104,41 +104,8 @@ namespace SocialLogin.Api.Controllers
                     email = email,
                     name = name,
                 };
-                return Ok(userInfo);
-                //    // Validate ID token
-                //    var handler = new JwtSecurityTokenHandler();
-                //    var validationParameters = new TokenValidationParameters
-                //    {
-                //        ValidAudience = clientId,
-                //        ValidIssuer = "https://accounts.google.com",
-                //        IssuerSigningKeys = new[]
-                //        {
-                //    new SymmetricSecurityKey(Encoding.ASCII.GetBytes(clientSecret))
-                //}
-                //    };
-
-                //try
-                //{
-                //    SecurityToken validatedToken;
-                //    // Extract user info from ID token
-                //    var claimsPrincipal = handler.ValidateToken(idToken, validationParameters,out validatedToken);
-                //    var userInfo = new
-                //    {
-                //        Email = claimsPrincipal.FindFirst(ClaimTypes.Email)?.Value,
-                //        Name = claimsPrincipal.FindFirst(ClaimTypes.Name)?.Value,
-                //        // Add more user info as needed
-                //    };
-
-                //    // Handle user authentication and further actions
-                //    // For example, you can store user info in session or database
-
-                //    return Ok(userInfo);
-                //}
-                //catch (Exception ex)
-                //{
-                //    // Handle token validation error
-                //    return BadRequest("Token validation failed");
-                //}
+                return Redirect("https://localhost:3000");
+                
             }
         }
     }
