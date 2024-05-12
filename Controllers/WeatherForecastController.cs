@@ -104,8 +104,8 @@ namespace SocialLogin.Api.Controllers
                     email = email,
                     name = name,
                 };
-                return Redirect("https://localhost:3000");
-                
+                return Redirect($"https://localhost:3000/account/register?email={email}");
+
             }
         }
     }
